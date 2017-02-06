@@ -886,30 +886,30 @@ transform: scale(1.5);
 -ms-transition: all 0.4s ease-in-out 0.2s;
 transition: all 0.4s ease-in-out 0.2s;
 }
-.ch-img-11 {
-background-image: url(content/images/11.png);
+.ch-img-1 {
+background-image: url(content/images/1.png);
 }
-.ch-img-12 {
-background-image: url(content/images/12.png);
+.ch-img-2 {
+background-image: url(content/images/2.png);
 }
-.ch-img-13 {
-background-image: url(content/images/13.png);
+.ch-img-3 {
+background-image: url(content/images/3.png);
 }
-.ch-img-14 {
-background-image: url(content/images/14.png);
+.ch-img-4 {
+background-image: url(content/images/4.png);
 }
 
-.ch-img-15 {
-background-image: url(content/images/15.png);
+.ch-img-5 {
+background-image: url(content/images/5.png);
 }
-.ch-img-16 {
-background-image: url(content/images/16.png);
+.ch-img-6 {
+background-image: url(content/images/6.png);
 }
-.ch-img-17 {
-background-image: url(content/images/17.png);
+.ch-img-7 {
+background-image: url(content/images/7.png);
 }
-.ch-img-18 {
-background-image: url(content/images/18.png);
+.ch-img-8 {
+background-image: url(content/images/8.png);
 }
 .ch-info h5 {
 color: #fff;

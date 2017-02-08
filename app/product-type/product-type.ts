@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ProductTypes } from '../shared/productTypes';
+import { ProductType } from '../shared/productTypes';
 import { AgroService } from '../shared/agro.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { AgroService } from '../shared/agro.service';
     styleUrls: ['./app/product-type/product-type.css']
 })
 export class ProductTypeList implements OnInit {
-    productTypes: ProductTypes[];
-    selectedProductTypes: ProductTypes;
+    productTypes: ProductType[];
+    selectedProductType: ProductType;
 
     constructor(
         private agroService: AgroService,
@@ -25,6 +25,14 @@ export class ProductTypeList implements OnInit {
         this.getProductTypes();
     }
 
+    onSelect(productType: ProductType): void {
+        this.selectedProductType = productType;
+    }
 
+    gotoDetail(productType: ProductType): void {
+        let link = ['/product-list/'+ productType.id];
+        console.log("LINK"+link.toString());
+        this.router.navigate(link);
+    }
 
 }

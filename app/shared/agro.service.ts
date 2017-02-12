@@ -24,7 +24,7 @@ export class AgroService {
             .then(res=>res.json());
     }
 
-    getProductByTypeId(typeId:number):Promise<Product> {
+    getProductByTypeId(typeId:number):Promise<Product[]> {
         return this.http.get('https://agrobackend.herokuapp.com/products/type/'+ typeId)
             .toPromise()
             .then(response => response.json());

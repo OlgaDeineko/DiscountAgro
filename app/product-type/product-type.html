@@ -1,0 +1,42 @@
+<div class="row">
+    <ul class="ch-grid col-md-12"  >
+        <li *ngFor="let productType of productTypes| slice:0:4" (click)="onSelect(productType)"
+            [class.selected]="productType === selectedProductTypes">
+            <div class="ch-item ch-img-{productType.image}}">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-{{productType.image}}"></div>
+                        <div class="ch-info-back">
+                            <h5><a id="productLink" (click)="gotoDetail(productType)">{{productType.name}}</a></h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">{{productType.name}}</h4>
+            <p>{{productType.description}}</p>
+            <a class="btn btn-lg btn-outline" (click)="gotoDetail(productType)" role="button">Деталі &raquo;</a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <ul class="ch-grid col-md-12"  >
+        <li *ngFor="let productType of productTypes| slice:4:8" (click)="onSelect(productType)"
+            [class.selected]="productType === selectedProductTypes">
+            <div class="ch-item ch-img-{productType.image}}">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-{{productType.image}}"></div>
+                        <div class="ch-info-back">
+                            <h5><a id="productLink" (click)="gotoDetail(productType)">{{productType.name}}</a></h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">{{productType.name}}</h4>
+            <p>{{productType.description}}</p>
+            <a class="btn btn-lg btn-outline" (click)="gotoDetail(productType)" role="button">Деталі &raquo;</a>
+        </li>
+    </ul>
+</div>

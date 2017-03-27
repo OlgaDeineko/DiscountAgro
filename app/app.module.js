@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
+var contact_form_1 = require('./contact-form/contact-form');
 var product_type_1 = require('./product-type/product-type');
 var product_list_1 = require('./product-list/product-list');
 var agro_service_1 = require('./shared/agro.service');
@@ -30,11 +31,12 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                contact_form_1.ContactForm,
                 product_type_1.ProductTypeList,
                 product_list_1.ProductList
             ],
             providers: [agro_service_1.AgroService],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent, contact_form_1.ContactForm]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

@@ -1,10 +1,14 @@
+<div class="container">
 <div class="row">
 <ul *ngFor="let product of products ">
     <li class="pull-left">
-        <img class="img-responsive" src="../../content/images/products/{{product.img}}.jpg"/>
-        <p>{{product.fullName}}</p>
-        <p (click)="gotoProductDetail(product)" class="btn btn-default">Переглянути детально</p>
+
+                <img class="img-responsive" src="../../content/images/products/{{product.img}}.jpg"/>
+                <p>{{product.name}}</p>
+                <p (click)="gotoProductDetail(product)" class="btn btn-default">Переглянути детально</p>
+
     </li>
 </ul>
 </div>
-<button (click)="goBack()">Назад</button>
+<button class="pull-left" (click)="goBack()">Назад</button>
+</div>

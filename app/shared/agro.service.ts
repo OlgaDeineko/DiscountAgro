@@ -29,6 +29,11 @@ export class AgroService {
             .toPromise()
             .then(response => response.json());
     }
+    getProductById(id:number):Promise<Product[]> {
+        return this.http.get('https://agrobackend.herokuapp.com/products/'+ id)
+            .toPromise()
+            .then(response => response.json());
+    }
     // private handleError(error:any):Promise<any> {
     //     console.error('An error occurred', error); // for demo purposes only
     //     return Promise.reject(error.message || error);

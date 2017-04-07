@@ -1,0 +1,28 @@
+<div *ngFor="let product of products ">
+    <h2>{{product.name}}</h2>
+    <div class="row">
+    <div class="col-md-4">
+        <img class="img-responsive" src="../../content/images/products/{{product.img}}.jpg"/>
+    </div>
+    <div class="col-md-8">
+        <p>{{product.fullName}}</p>
+        <p>{{product.desccription}}</p>
+        <p><b>Переваги препарату: </b>{{product.advantage}}</p>
+        <p><b>Виробник: </b>{{product.supplier}}</p>
+        <p><b>Упаковка: </b>{{product.unit}}</p>
+        <p><b>Діюча речовина: </b>{{product.activeSubstance}}</p>
+        <p><b>Препаративна форма: </b>{{product.preparativeForm}}</p>
+        <p><b>Спектр дії: </b>{{product.applying}}</p>
+
+
+        <p><b>Механізм дії: </b>{{product.actionMechanism}}</p>
+        <p><b>Застосування: </b>{{product.recomendation}}</p>
+        <p>{{product.consumptionRate}}</p>
+        <p>{{product.characteristic}}</p>
+        <p><b>Сумісність: </b>{{product.compatibility}}</p>
+        <p><b>Застереження: </b>{{product.warning}}</p>
+
+    </div>
+    </div>
+    <button class="clearfix" (click)="goBackToList()">Back</button>
+</div>

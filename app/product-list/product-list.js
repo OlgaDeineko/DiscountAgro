@@ -35,6 +35,10 @@ var ProductList = (function () {
         var link = ['/product-type'];
         this.router.navigate(link);
     };
+    ProductList.prototype.gotoProductDetail = function (product) {
+        var link = ['/product-detail/' + product.id];
+        this.router.navigate(link);
+    };
     ProductList = __decorate([
         core_1.Component({
             moduleId: module.id,

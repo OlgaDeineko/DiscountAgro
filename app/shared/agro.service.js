@@ -30,6 +30,11 @@ var AgroService = (function () {
             .toPromise()
             .then(function (response) { return response.json(); });
     };
+    AgroService.prototype.getProductById = function (id) {
+        return this.http.get('https://agrobackend.herokuapp.com/products/' + id)
+            .toPromise()
+            .then(function (response) { return response.json(); });
+    };
     AgroService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

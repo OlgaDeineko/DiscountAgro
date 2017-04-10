@@ -4,4 +4,6 @@ ul{
 }
 li{
     margin: 2%;
+    float: left;
 }
+

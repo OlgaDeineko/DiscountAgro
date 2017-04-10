@@ -2,8 +2,7 @@
   "name": "discount-agro",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run lite",
-    "lite": "lite-server"
+    "start": "npm run"
   },
   "license": "MIT",
   "dependencies": {

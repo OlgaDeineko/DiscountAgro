@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
 import { AppComponent }  from './app.component';
-import { ContactForm } from './contact-form/contact-form';
+import { ContactFormComponent } from './contact-form/contact-form';
 import { ProductTypeList } from './product-type/product-type';
 import {ProductList} from './product-list/product-list';
 import {ProductDetail} from './product-detail/product-detail';
@@ -21,12 +21,12 @@ import { AppRoutingModule } from './app-routing.module';
     ],
     declarations: [
         AppComponent,
-        ContactForm,
+        ContactFormComponent,
         ProductTypeList,
         ProductList,
         ProductDetail
     ],
     providers: [ AgroService ],
-    bootstrap:    [ AppComponent,ContactForm]
+    bootstrap:    [ AppComponent,ContactFormComponent ]
 })
 export class AppModule { }

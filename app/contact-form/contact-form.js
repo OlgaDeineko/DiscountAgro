@@ -37,7 +37,7 @@ var ContactFormComponent = (function () {
             //Если нет файла, то слать как обычный JSON
             final_data = this.form;
         }
-        this.http.post('https://agrobackend.herokuapp.com/message', final_data)
+        return this.http.post('https://agrobackend.herokuapp.com/message', final_data)
             .subscribe(function (data) {
             alert('ok');
         }, function (error) {

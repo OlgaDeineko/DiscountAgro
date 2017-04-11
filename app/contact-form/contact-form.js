@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
 var ContactFormComponent = (function () {
     function ContactFormComponent(http) {
         this.http = http;
@@ -37,11 +38,10 @@ var ContactFormComponent = (function () {
             //Если нет файла, то слать как обычный JSON
             final_data = this.form;
         }
-        return this.http.post('https://agrobackend.herokuapp.com/message', final_data)
-            .subscribe(function (data) {
+        this.http.post('https://agrobackend.herokuapp.com/message', final_data)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (resp) {
             alert('ok');
-        }, function (error) {
-            console.log(JSON.stringify(error.json()));
         });
     };
     ContactFormComponent = __decorate([

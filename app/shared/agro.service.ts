@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -35,12 +35,9 @@ export class AgroService {
             .then(response => response.json());
     }
 
-       // sendMessage():Promise<Product[]> {
+    //    sendMessage(data) {
     //     let headers = new Headers({ 'Content-Type': 'application/json' });
-    //     let options = new RequestOptions({ headers: headers });
-    //     return this.http.post('https://agrobackend.herokuapp.com/message')
-    //         .map(this.extractData)
-    //         .catch(this.handleError);
+    //     return this.http.post('https://agrobackend.herokuapp.com/message',data,{ headers: headers });
     // }
 
 

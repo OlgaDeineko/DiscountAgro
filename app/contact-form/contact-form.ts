@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Observable';
 import { AgroService } from '../shared/agro.service';
 
 
@@ -36,11 +38,11 @@ export class ContactFormComponent {
             final_data = this.form;
         }
 
-        return this.http.post('https://agrobackend.herokuapp.com/message', final_data)
-            .subscribe(data => {
+        this.http.post('https://agrobackend.herokuapp.com/message', final_data)
+            .map((response: Response) => response.json())
+            .subscribe(resp => {
             alert('ok');
-        }, error => {
-            console.log(JSON.stringify(error.json()));
-        });
+            })
+
     }
 }

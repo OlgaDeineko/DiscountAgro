@@ -7,7 +7,7 @@ export class Product {
     img: number;
     activeSubstance: string;
     preparativeForm: string;
-    desccription: string;
+    description: string;
     applying: string;
     consumptionRate: string;
     recomendation: string;

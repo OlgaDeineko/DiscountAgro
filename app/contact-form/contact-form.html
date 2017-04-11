@@ -1,19 +1,19 @@
 <div class="contact-form">
     <form method="post" name="contactform" id="contactform">
         <p>
-            <input name="name" type="text" id="name" placeholder="Ім’я...">
+            <input name="name" type="text" id="name" placeholder="Ім’я..." [(ngModel)]="model.name">
         </p>
         <p>
-            <input name="email" type="text" id="email" placeholder="Email...">
+            <input name="email" type="text" id="email" placeholder="Email..." [(ngModel)]="model.email">
         </p>
         <p>
-            <input name="subject" type="text" id="subject" placeholder="Тема повідомлення..">
+            <input name="subject" type="text" id="subject" placeholder="Тема повідомлення.." [(ngModel)]="model.subject">
         </p>
         <p>
-            <input name="file" type="file" id="file">
+            <input name="file" type="file" id="file" [(ngModel)]="model.file">
         </p>
         <p>
-            <textarea name="comments" id="comments" placeholder="Текст повідомлення..."></textarea>
+            <textarea name="comments" id="comments" placeholder="Текст повідомлення..." [(ngModel)]="model.comments"></textarea>
         </p>
         <input type="submit" class="mainBtn" id="submit" value="Надіслати повідомлення">
     </form>

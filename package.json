@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "prestart": "npm install",
-    "start": "http-server"
+    "start": "npm run lite",
+    "lite": "lite-server"
   },
   "license": "MIT",
   "dependencies": {

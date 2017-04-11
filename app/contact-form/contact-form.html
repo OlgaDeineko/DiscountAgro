@@ -1,20 +1,20 @@
 <div class="contact-form">
-    <form method="post" name="contactform" id="contactform">
+    <form name="form" (ngSubmit)="contactForm.form.valid && submit_register()" #contactForm="ngForm" novalidate id="contactform">
         <p>
-            <input name="name" type="text" id="name" placeholder="Ім’я...">
+            <input name="name" type="text" id="name" placeholder="Ім’я..." [(ngModel)]="form.Fname" #Fname="ngModel">
         </p>
         <p>
-            <input name="email" type="text" id="email" placeholder="Email...">
+            <input name="email" type="text" id="email" placeholder="Email..." [(ngModel)]="form.email" #email="ngModel">
         </p>
         <p>
-            <input name="subject" type="text" id="subject" placeholder="Тема повідомлення..">
+            <input name="subject" type="text" id="subject" placeholder="Тема повідомлення.." [(ngModel)]="form.subject" #subject="ngModel">
         </p>
         <p>
-            <input name="file" type="file" id="file">
+            <input name="file" type="file" id="file" (change)="addFile($event)">
         </p>
         <p>
-            <textarea name="comments" id="comments" placeholder="Текст повідомлення..."></textarea>
+            <textarea name="comments" id="comments" placeholder="Текст повідомлення..." [(ngModel)]="form.comments" #comments="ngModel"></textarea>
         </p>
-        <input type="submit" class="mainBtn" id="submit" value="Надіслати повідомлення">
+        <button type="submit" class="mainBtn" id="submit">Надіслати повідомлення</button>
     </form>
 </div> <!-- /.contact-form -->

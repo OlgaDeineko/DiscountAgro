@@ -9,16 +9,50 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 var ContactFormComponent = (function () {
-    function ContactFormComponent() {
+    function ContactFormComponent(http) {
+        this.http = http;
+        this.form = {};
+        this.form = {
+            name: {}
+        };
     }
+    ContactFormComponent.prototype.addFile = function (event) {
+        var target = event.target || event.srcElement;
+        this.files = target.files;
+    };
+    ContactFormComponent.prototype.submit_register = function () {
+        var final_data;
+        if (this.files) {
+            var files = this.files;
+            var formData = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                formData.append('file', files[i]);
+            }
+            formData.append('data', JSON.stringify(this.form));
+            final_data = formData;
+        }
+        else {
+            //Если нет файла, то слать как обычный JSON
+            final_data = this.form;
+        }
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        this.http.post('https://agrobackend.herokuapp.com/message', final_data, { headers: headers })
+            .subscribe(function (data) {
+            alert('ok');
+        }, function (error) {
+            console.log(JSON.stringify(error.json()));
+        });
+    };
     ContactFormComponent = __decorate([
         core_1.Component({
             selector: 'contact-form',
             templateUrl: './app/contact-form/contact-form.html',
             styleUrls: ['./app/contact-form/contact-form.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], ContactFormComponent);
     return ContactFormComponent;
 }());

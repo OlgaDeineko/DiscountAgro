@@ -4,6 +4,7 @@
   "scripts": {
     "prestart": "npm install",
     "start": "http-server"
+
   },
   "license": "MIT",
   "dependencies": {

@@ -16,7 +16,6 @@ export class ContactFormComponent {
     files: any;
     constructor(public http:Http) {
         this.form = {
-            name: {}
         };
     }
     addFile(event) {
@@ -40,7 +39,7 @@ export class ContactFormComponent {
         }
 
         this.http.post('https://agrobackend.herokuapp.com/message', JSON.stringify(final_data))
-            .map((response: Response) => response.json())
+            .map((response: Response) => response)
             .subscribe(resp => {
             alert('ok');
             })

@@ -15,9 +15,7 @@ var ContactFormComponent = (function () {
     function ContactFormComponent(http) {
         this.http = http;
         this.form = {};
-        this.form = {
-            name: {}
-        };
+        this.form = {};
     }
     ContactFormComponent.prototype.addFile = function (event) {
         var target = event.target || event.srcElement;
@@ -39,7 +37,7 @@ var ContactFormComponent = (function () {
             final_data = this.form;
         }
         this.http.post('https://agrobackend.herokuapp.com/message', JSON.stringify(final_data))
-            .map(function (response) { return response.json(); })
+            .map(function (response) { return response; })
             .subscribe(function (resp) {
             alert('ok');
         });

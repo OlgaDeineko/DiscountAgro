@@ -10,6 +10,17 @@ import { AgroService } from '../shared/agro.service';
     templateUrl: './app/contact-form/contact-form.html',
     styleUrls: ['./app/contact-form/contact-form.css']
 })
-export class ContactForm {
-
+export class ContactFormComponent {
+    // constructor(private agroService:AgroService,
+    //             private route:ActivatedRoute) {
+    // }
+    //
+    //
+    // sendMessage() {
+    //     this.departmentService.sendMessage(this.model);
+    // }
+    //
+    // ngOnInit():void {
+    //     this.sendMessage();
+    // }
 }

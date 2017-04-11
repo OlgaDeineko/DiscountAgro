@@ -6,7 +6,7 @@ export class Product {
     unit: string;
     img: number;
     activeSubstance: string;
-    consistence: string;
+    preparativeForm: string;
     desccription: string;
     applying: string;
     consumptionRate: string;
@@ -15,7 +15,9 @@ export class Product {
     compatibility: string;
     warning: string;
     type:string;
-    productPrice: number;
+    characteristic: string;
+    advantage: string;
+    supplier: string;
     constructor( typeId:number, type: string){
         this.typeId= typeId;
         this.type = type;

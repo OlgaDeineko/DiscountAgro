@@ -16,6 +16,7 @@ var app_component_1 = require('./app.component');
 var contact_form_1 = require('./contact-form/contact-form');
 var product_type_1 = require('./product-type/product-type');
 var product_list_1 = require('./product-list/product-list');
+var product_detail_1 = require('./product-detail/product-detail');
 var agro_service_1 = require('./shared/agro.service');
 var app_routing_module_1 = require('./app-routing.module');
 var AppModule = (function () {
@@ -33,7 +34,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 contact_form_1.ContactForm,
                 product_type_1.ProductTypeList,
-                product_list_1.ProductList
+                product_list_1.ProductList,
+                product_detail_1.ProductDetail
             ],
             providers: [agro_service_1.AgroService],
             bootstrap: [app_component_1.AppComponent, contact_form_1.ContactForm]

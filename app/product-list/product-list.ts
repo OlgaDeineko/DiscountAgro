@@ -15,7 +15,6 @@ import { AgroService } from '../shared/agro.service';
 export class ProductList implements OnInit{
     products: Product[];
     product: Product;
-    selectedProduct: Product;
 
     constructor(
         private agroService: AgroService,
@@ -35,6 +34,10 @@ export class ProductList implements OnInit{
     }
     goBack(): void {
         let link = ['/product-type'];
+        this.router.navigate(link);
+    }
+    gotoProductDetail(product: Product): void {
+        let link = ['/product-detail/'+product.id];
         this.router.navigate(link);
     }
 }

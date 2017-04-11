@@ -38,7 +38,7 @@ export class ContactFormComponent {
             final_data = this.form;
         }
 
-        this.http.post('https://agrobackend.herokuapp.com/message', final_data)
+        this.http.post('https://agrobackend.herokuapp.com/message', JSON.stringify(final_data))
             .map((response: Response) => response.json())
             .subscribe(resp => {
             alert('ok');

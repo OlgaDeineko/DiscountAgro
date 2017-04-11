@@ -1,20 +1,20 @@
 <div class="contact-form">
-    <form *ngIf="active" (ngSubmit)="onSubmit()" #contactForm="ngForm" id="contactform">
+    <form method="post" name="contactform" id="contactform">
         <p>
-            <input name="name" [(ngModel)]="model.name" type="text" id="name" placeholder="Ім’я...">
+            <input name="name" type="text" id="name" placeholder="Ім’я...">
         </p>
         <p>
-            <input name="email" [(ngModel)]="model.email" type="text" id="email" placeholder="Email...">
+            <input name="email" type="text" id="email" placeholder="Email...">
         </p>
         <p>
-            <input name="subject" [(ngModel)]="model.subject" type="text" id="subject" placeholder="Тема повідомлення..">
+            <input name="subject" type="text" id="subject" placeholder="Тема повідомлення..">
         </p>
         <p>
             <input name="file" type="file" id="file">
         </p>
         <p>
-            <textarea name="comments" [(ngModel)]="model.comments" id="comments" placeholder="Текст повідомлення..."></textarea>
+            <textarea name="comments" id="comments" placeholder="Текст повідомлення..."></textarea>
         </p>
-        <button type="button" class="mainBtn" [disabled]="!contactForm.form.valid" (click)="sendMessage()">Надіслати повідомлення</button>
+        <input type="submit" class="mainBtn" id="submit" value="Надіслати повідомлення">
     </form>
 </div> <!-- /.contact-form -->

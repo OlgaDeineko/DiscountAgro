@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ContactForm = (function () {
-    function ContactForm() {
+var ContactFormComponent = (function () {
+    function ContactFormComponent() {
     }
-    ContactForm = __decorate([
+    ContactFormComponent = __decorate([
         core_1.Component({
             selector: 'contact-form',
             templateUrl: './app/contact-form/contact-form.html',
             styleUrls: ['./app/contact-form/contact-form.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], ContactForm);
-    return ContactForm;
+    ], ContactFormComponent);
+    return ContactFormComponent;
 }());
-exports.ContactForm = ContactForm;
+exports.ContactFormComponent = ContactFormComponent;
 //# sourceMappingURL=contact-form.js.map

@@ -32,13 +32,13 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                contact_form_1.ContactForm,
+                contact_form_1.ContactFormComponent,
                 product_type_1.ProductTypeList,
                 product_list_1.ProductList,
                 product_detail_1.ProductDetail
             ],
             providers: [agro_service_1.AgroService],
-            bootstrap: [app_component_1.AppComponent, contact_form_1.ContactForm]
+            bootstrap: [app_component_1.AppComponent, contact_form_1.ContactFormComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

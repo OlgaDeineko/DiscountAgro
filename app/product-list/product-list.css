@@ -1,9 +1,18 @@
-ul{
-    margin: 0 auto;
-    padding: 0;
-}
 li{
+    position: relative;
     margin: 2%;
     float: left;
+    border: 2px ridge lawngreen;
+    width: 20%;
+    height: 20rem;
+    text-align: center;
+    padding: 5px;
 }
-
+ .listButton{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background:#62B817;
+     color:white;
+ }

@@ -51,6 +51,7 @@
 .flexslider .slides img {
   width: 100%;
   display: block;
+  margin-top: 2rem;
 }
 
 .flex-pauseplay span {
@@ -388,19 +389,4 @@ body.blurred > * {
   background-image: url("../images/previous.png");
 }
 
-.logo-wrapper {
-  background: url(../images/logo.png) no-repeat;
-  height: 100px;
-  background-position: 15px;
-}
 
-.logo-wrapper a {
-  display: inline-block;
-  overflow: hidden;
-  padding-left: 130px;
-  line-height: 100px;
-  text-transform: uppercase;
-  color: #62B817;
-  font-size: 32px;
-  font-weight: 700;
-}

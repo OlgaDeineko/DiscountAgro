@@ -6,9 +6,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-body {
-  line-height: 1;
-}
 
 .blue {
 	color: #06C;
@@ -34,16 +31,16 @@ blockquote:after {
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+/*table {*/
+  /*border-collapse: collapse;*/
+  /*border-spacing: 0;*/
+/*}*/
 
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
+/*html {*/
+  /*font-size: 100%;*/
+  /*-webkit-text-size-adjust: 100%;*/
+  /*-ms-text-size-adjust: 100%;*/
+/*}*/
 
 a:focus {
   outline: none;
@@ -76,9 +73,9 @@ video {
   *zoom: 1;
 }
 
-audio:not([controls]) {
-  display: none;
-}
+/*audio:not([controls]) {*/
+  /*display: none;*/
+/*}*/
 
 sub,
 sup {
@@ -148,8 +145,7 @@ textarea {
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: .83em;
-  line-height: 1.75;
+  line-height: 1.5;
   color: #666666;
   background-color: white;
   text-rendering: optimizeLegibility;
@@ -225,33 +221,12 @@ hr {
   margin: 40px 0;
 }
 
-.site-header ul.social-icons {
-  position: relative;
-  z-index: 11;
-  margin: 30px 0;
-}
-.site-header ul.social-icons li {
-  display: inline-block;
-  margin: 0 2px;
-}
-.site-header ul.social-icons li a {
-  width: 36px;
-  height: 36px;
-  background-color: white;
-  color: #444444;
-  text-align: center;
-  line-height: 36px;
-  border-radius: 18px;
-  -webkit-border-radius: 18px;
-  -moz-border-radius: 18px;
-}
 
 .main-header {
   position: fixed;
   width: 100%;
   margin: 0 auto;
   z-index: 1000;
-  top: 94px;
   -webkit-transition: all 150ms ease-in-out;
   -moz-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
@@ -280,16 +255,6 @@ hr {
   background-position: 15px;
 }
 
-.logo-wrapper a {
-  display: inline-block;
-  overflow: hidden;
-  padding-left: 130px;
-  line-height: 100px;
-  text-transform: uppercase;
-  color: #62B817;
-  font-size: 32px;
-  font-weight: 700;
-}
 
 .main-menu ul li {
   display: inline-block;
@@ -417,10 +382,7 @@ background:url(content/images/arrow-1.png) center bottom no-repeat;
   .logo-wrapper{
     height: 50px;
   }
-  .logo-wrapper a {
-    line-height: 50px;
-    padding-left: 70px;
-  }
+
   .toggle-menu {
     margin-top: 7px;
     margin-right: 10px;
@@ -482,7 +444,6 @@ background:url(content/images/arrow-1.png) center bottom no-repeat;
 
 .content-section {
   margin-top: 80px;
-  padding-top: 60px;
 }
 
 .heading-section {

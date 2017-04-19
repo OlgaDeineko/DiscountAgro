@@ -1,7 +1,7 @@
 <div class="row">
     <ul class="ch-grid col-md-12"  >
         <li *ngFor="let productType of productTypes| slice:0:4" (click)="onSelect(productType)"
-            [class.selected]="productType === selectedProductTypes">
+            [class.selected]="productType === selectedProductType">
             <div class="ch-item ch-img-{productType.image}}" (click)="gotoDetail(productType)">
                 <div class="ch-info-wrap">
                     <div class="ch-info">
@@ -22,7 +22,7 @@
 <div class="row">
     <ul class="ch-grid col-md-12"  >
         <li *ngFor="let productType of productTypes| slice:4:8" (click)="onSelect(productType)"
-            [class.selected]="productType === selectedProductTypes">
+            [class.selected]="productType === selectedProductType">
             <div class="ch-item ch-img-{productType.image}}" (click)="gotoDetail(productType)">
                 <div class="ch-info-wrap">
                     <div class="ch-info">

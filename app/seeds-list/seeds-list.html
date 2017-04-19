@@ -1,0 +1,42 @@
+<div class="row">
+    <ul class="ch-grid col-md-12"  >
+        <li *ngFor="let seed of seeds| slice:0:4" (click)="onSelect(seed)"
+            [class.selected]="seed === selectedSeed">
+            <div class="ch-item ch-img-{seed.image}}" (click)="gotoDetail(seed)">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-{{seed.image}}"></div>
+                        <div class="ch-info-back">
+                            <h5><a id="productLink" (click)="gotoDetail(seed)">{{seed.name}}</a></h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">{{seed.typeName}}</h4>
+            <p class="productDescription">{{seed.name}}</p>
+            <a class="btn btn-lg btn-outline" (click)="gotoDetail(seed)" role="button">Деталі &raquo;</a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <ul class="ch-grid col-md-12"  >
+        <li *ngFor="let seed of seeds| slice:4:6" (click)="onSelect(seed)"
+            [class.selected]="seed === selectedSeed">
+            <div class="ch-item ch-img-{seed.image}}" (click)="gotoDetail(seed)">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-{{seed.image}}"></div>
+                        <div class="ch-info-back">
+                            <h5><a id="productLink" (click)="gotoDetail(seed)">{{seed.name}}</a></h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="slideanim">{{seed.typeName}}</h4>
+            <p class="productDescription">{{seed.name}}</p>
+            <a class="btn btn-lg btn-outline" (click)="gotoDetail(seed)" role="button">Деталі &raquo;</a>
+        </li>
+    </ul>
+</div>

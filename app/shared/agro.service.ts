@@ -5,6 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 import { ProductType } from './productTypes';
 import {Product} from './product';
+import { Seed } from './seeds';
 
 
 @Injectable()
@@ -35,6 +36,12 @@ export class AgroService {
             .then(response => response.json());
     }
 
+    getSeeds():Promise<Seed[]> {
+        return this.http.get('https://agrobackend.herokuapp.com/seeds')
+            .toPromise()
+            .then(response => response.json());
+
+    }
     //    sendMessage(data) {
     //     let headers = new Headers({ 'Content-Type': 'application/json' });
     //     return this.http.post('https://agrobackend.herokuapp.com/message',data,{ headers: headers });
